@@ -35,7 +35,7 @@ resource "aws_instance" "jenkins-instance" {
 resource "aws_security_group" "sg_allow_ssh_jenkins" {
   name        = "allow_ssh_jenkins"
   description = "Allow SSH and Jenkins inbound traffic"
-  vpc_id      = "${aws_vpc.development-vpc.id}"
+  vpc_id      =                             "${aws_vpc.development-vpc.id}"
 
   ingress {
     from_port   = 22
